@@ -1,2 +1,5 @@
 # youtube-search-react
-Using the YouTube API to fetch and display videos with ReactJS framework. Tutorial done from Udemy React videos.
+Using the YouTube API to fetch and display videos with ReactJS framework. 
+
+Tutorial done from Udemy React videos.
+Source: https://www.udemy.com/react-redux/
