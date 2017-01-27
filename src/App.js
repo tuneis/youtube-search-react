@@ -9,8 +9,6 @@ import VideoDetail from './components/video_detail';
 
 import API from './api.json';
 
-const API_KEY = API.API_KEY;
-
 class App extends Component {
 
   constructor(props) {
@@ -23,7 +21,7 @@ class App extends Component {
   }
 
   videoSearch(term) {
-    YTSearch({ key: API_KEY, term: term }, (videos) => {
+    YTSearch({ key: API.API_KEY, term: term }, (videos) => {
       // if key is same as variable name this assignment works
       this.setState({
         videos: videos,
@@ -40,9 +38,7 @@ class App extends Component {
       <div>
         <SearchBar onSearchTermChange={search} />
         <VideoDetail video={this.state.selectedVideo} />
-        <VideoList
-          onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
-          videos={this.state.videos} />
+        <VideoList onVideoSelect={selectedVideo => this.setState({ selectedVideo })} videos={this.state.videos} />
       </div>
     );
   }
